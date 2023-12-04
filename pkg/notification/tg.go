@@ -27,7 +27,7 @@ type TelegramBotResponse struct {
 	Description string `json:"description"`
 }
 
-func (t *TelegramSender) SendNotification(info NotificationInfo) error {
+func (t *TelegramSender) SendNotification(info *NotificationInfo) error {
 	parse, err := url.Parse(fmt.Sprintf("https://api.telegram.org/%s/sendMessage", "bot"+t.BotId))
 	if err != nil {
 		return err
