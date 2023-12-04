@@ -9,6 +9,8 @@ type NotificationInfo struct {
 	TelegramContent string
 	// Slack
 	SlackContent string
+	// webhook
+	WebhookContent any
 }
 
 type Notifier interface {

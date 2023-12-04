@@ -35,7 +35,6 @@ func (e *EmailSender) SendNotification(n *NotificationInfo) error {
 		Password: e.password,
 		SSL:      false,
 	}
-
 	err := d.DialAndSend(msg)
 	return err
 }
